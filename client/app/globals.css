@@ -1,26 +1,100 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #000000;
+
+  /* color */
+  --color-primary-blue: #0b0d17;
+  --color-secondary-blue: #d0d6f9;
+  --color-white: #ffffff;
+
+  /* spacing */
+  --spacing-25: 2px;
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1200: 96px;
+  --spacing-1600: 128px;
+
+  /* Typography */
+  --font-heading: var(--font-bellefair), serif;
+  --font-sub-heading: var(--font-barlow-condensed, system-ui), sans-serif;
+  --font-body: var(--font-barlow, system-ui), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-white;
+}
+
+@utility text-1 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 144px;
+  line-height: 1.719;
+  letter-spacing: 0;
+}
+
+@utility text-2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 1.146;
+  letter-spacing: 0;
+}
+@utility text-3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.642;
+  letter-spacing: 0;
+}
+@utility text-4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+@utility text-5 {
+  font-family: var(--font-sub-heading);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 0.336;
+  letter-spacing: 4px;
+}
+@utility text-6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 0.321;
+  letter-spacing: 0;
+}
+@utility text-7 {
+  font-family: var(--font-sub-heading);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 0.168;
+  letter-spacing: 2px;
+}
+@utility text-8 {
+  font-family: var(--font-sub-heading);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 0.192;
+  letter-spacing: 2px;
+}
+@utility text-9 {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0;
 }
