@@ -99,3 +99,9 @@ body {
   line-height: 1.8;
   letter-spacing: 0;
 }
+
+@layer utilities {
+  .preserve-navbar-space {
+    @apply pt-[88px];
+  }
+}

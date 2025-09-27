@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { bellefair, barlow, barlowCond } from './font'
+import MainLayout from '@/layout/MainLayout'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -19,7 +20,9 @@ export default function RootLayout({
       lang="en"
       className={`${bellefair.variable} ${barlow.variable} ${barlowCond.variable}`}
     >
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
   )
 }
