@@ -42,12 +42,14 @@ const CrewSlide = () => {
           <picture>
             <source
               srcSet={`/assets/crew/image-${crewData.name
+                .toLowerCase()
                 .split(' ')
                 .join('-')}.webp`}
               type="image/webp"
             />
             <Image
               src={`/assets/crew/image-${crewData.name
+                .toLowerCase()
                 .split(' ')
                 .join('-')}.png`}
               fill
