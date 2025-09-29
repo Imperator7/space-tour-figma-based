@@ -1,5 +1,5 @@
 export const crews = ['Douglas', 'Mark', 'Victor', 'Anousheh'] as const
-type CREW = (typeof crews)[number]
+export type CREW = (typeof crews)[number]
 
 type CREW_DATA = {
   name: string
