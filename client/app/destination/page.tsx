@@ -23,14 +23,14 @@ const Destination = () => {
           'h-full p-300 gap-300',
         ].join()}
       >
-        <div className="flex h-[19px] gap-300 items-center justify-center">
+        <h3 className="flex h-[19px] gap-300 items-center justify-center">
           <span className="text-8 font-bold tabular-nums leading-none opacity-25">
             01
           </span>
-          <span className="text-6 text-[16px] leading-none">
+          <span className="text-5 text-[16px] leading-none">
             PICK YOUR DESTINATION
           </span>
-        </div>
+        </h3>
 
         <div
           className={[
