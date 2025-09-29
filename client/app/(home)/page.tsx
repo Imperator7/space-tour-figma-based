@@ -12,13 +12,13 @@ export default function Home() {
     >
       <div className="flex flex-col p-300 h-full">
         <div className="flex flex-col items-center justify-center gap-300">
-          <p className="text-6 text-[16px] h-[19px] leading-relaxed">
+          <p className="text-5 text-[16px] h-[19px] leading-relaxed text-secondary-blue tracking-[2px]">
             SO, YOU WANT TO TRAVEL TO
           </p>
           <p className="text-1 text-[80px] h-[92px] flex items-center leading-none">
             SPACE
           </p>
-          <p className="text-9 text-[15px] text-center">
+          <p className="text-9 text-[15px] text-center text-secondary-blue">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
