@@ -1,6 +1,15 @@
+'use client'
+
 import Image from 'next/image'
+import TabMenu from '@/components/TabMenu'
+import { useState } from 'react'
+import { Planet, PLANET_ASSETS } from '@/lib/planets'
 
 const Destination = () => {
+  const [selectedTab, setSelectedTab] = useState<Planet>('MOON')
+
+  const handleSelectTab = (tab: Planet) => setSelectedTab(tab)
+
   return (
     <div
       className={[
@@ -9,21 +18,65 @@ const Destination = () => {
       ].join(' ')}
     >
       <div
-        className={['flex flex-col items-center gap-300', 'h-full p-300'].join(
-          ' '
-        )}
+        className={[
+          'flex flex-col items-center',
+          'h-full p-300 gap-300',
+        ].join()}
       >
-        <p className="h-[19px]">
-          <span>01</span>
-          <span>PICK YOUR DESTINATION</span>
-        </p>
-        <div className="h-[202px] flex justify-center items-center">
+        <div className="flex h-[19px] gap-300 items-center justify-center">
+          <span className="text-8 font-bold tabular-nums leading-none opacity-25">
+            01
+          </span>
+          <span className="text-6 text-[16px] leading-none">
+            PICK YOUR DESTINATION
+          </span>
+        </div>
+
+        <div
+          className={[
+            'h-[202px] flex justify-center items-center',
+            'transition-all duration-2000',
+          ].join(' ')}
+        >
           <Image
-            src={'/assets/destination/image-moon.png'}
+            src={`/assets/destination/image-${selectedTab.toLowerCase()}.png`}
             width={150}
             height={150}
             alt="moon"
           />
+        </div>
+        <div className="flex flex-col gap-300 items-center h-full">
+          <TabMenu
+            selectedTab={selectedTab}
+            handleSelectTab={handleSelectTab}
+          />
+          <div className="flex flex-col gap-200 items-center">
+            <h2 className="text-2 text-[56px]">
+              {PLANET_ASSETS[selectedTab].name.toUpperCase()}
+            </h2>
+            <p className="text-center text-secondary-blue">
+              {PLANET_ASSETS[selectedTab].description}
+            </p>
+          </div>
+        </div>
+        <div className="h-[1px] w-full bg-[#979797]/25"></div>
+        <div className="flex flex-col items-center gap-300">
+          <div className="flex flex-col items-center gap-150">
+            <p className="text-7 leading-none text-secondary-blue h-[17px] align-text-center">
+              AVG. DISTANCE
+            </p>
+            <p className="text-6 leading-none h-[32px]">
+              {PLANET_ASSETS[selectedTab].distance.toUpperCase()}
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-150">
+            <p className="text-7 leading-none text-secondary-blue h-[17px] align-text-center">
+              EST. TRAVEL TIME
+            </p>
+            <p className="text-6 leading-none h-[32px]">
+              {PLANET_ASSETS[selectedTab].travel.toUpperCase()}
+            </p>
+          </div>
         </div>
       </div>
     </div>
