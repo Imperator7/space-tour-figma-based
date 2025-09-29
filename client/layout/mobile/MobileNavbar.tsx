@@ -1,8 +1,9 @@
 'use client'
 
-import NavItem from '@/components/์NavItem'
+import NavItem from '@/components/NavItem'
 import CloseButton from '@/components/CloseButton'
-import { useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
 
 type NavbarProps = {
   toggleNavbar: boolean
@@ -13,13 +14,30 @@ const MobileNavbar = ({
   toggleNavbar = false,
   handleCloseNavbar,
 }: NavbarProps) => {
-  const [selectedLink, setSelectedLink] = useState('HOME')
-  const links = ['HOME', 'DESTINATION', 'CREW', 'TECHNOLOGY']
+  const links = [
+    {
+      name: 'home',
+      href: '/',
+    },
+    {
+      name: 'destination',
+      href: '/destination',
+    },
+    {
+      name: 'crew',
+      href: '/crew',
+    },
+    {
+      name: 'technology',
+      href: '/technology',
+    },
+  ]
 
-  const handleLinkSelected = (link: string) => {
-    setSelectedLink(link)
-    return
-  }
+  const pathname = usePathname()
+
+  useEffect(() => {
+    console.log(pathname)
+  }, [pathname])
 
   return (
     <div
@@ -34,10 +52,9 @@ const MobileNavbar = ({
       <div className="flex flex-col gap-400">
         {links.map((link, i) => (
           <NavItem
-            key={link}
-            selected={selectedLink === link}
-            navName={link}
-            handleClick={handleLinkSelected}
+            key={link.name}
+            selected={pathname === link.href}
+            linkData={link}
             index={i}
           />
         ))}
