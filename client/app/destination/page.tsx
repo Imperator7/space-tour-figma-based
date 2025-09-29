@@ -38,12 +38,18 @@ const Destination = () => {
             'transition-all duration-2000',
           ].join(' ')}
         >
-          <Image
-            src={`/assets/destination/image-${selectedTab.toLowerCase()}.png`}
-            width={150}
-            height={150}
-            alt="moon"
-          />
+          <picture>
+            <source
+              srcSet={`/assets/destination/image-${selectedTab.toLowerCase()}.webp`}
+              type="image/webp"
+            />
+            <Image
+              src={`/assets/destination/image-${selectedTab.toLowerCase()}.png`}
+              width={150}
+              height={150}
+              alt="moon"
+            />
+          </picture>
         </div>
         <div className="flex flex-col gap-300 items-center h-full">
           <TabMenu
@@ -54,7 +60,7 @@ const Destination = () => {
             <h2 className="text-2 text-[56px]">
               {PLANET_ASSETS[selectedTab].name.toUpperCase()}
             </h2>
-            <p className="text-center text-secondary-blue">
+            <p className="text-center text-secondary-blue h-[136px]">
               {PLANET_ASSETS[selectedTab].description}
             </p>
           </div>
