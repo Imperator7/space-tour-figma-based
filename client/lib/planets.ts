@@ -1,5 +1,5 @@
 export const PLANETS = ['MOON', 'MARS', 'EUROPA', 'TITAN'] as const
-export type Planet = (typeof PLANETS)[number]
+export type PLANET = (typeof PLANETS)[number]
 
 type PLANET_DATA = {
   name: string
@@ -12,7 +12,7 @@ type PLANET_DATA = {
   travel: string
 }
 
-export const PLANET_ASSETS: Record<Planet, PLANET_DATA> = {
+export const PLANET_ASSETS: Record<PLANET, PLANET_DATA> = {
   MOON: {
     name: 'Moon',
     images: {

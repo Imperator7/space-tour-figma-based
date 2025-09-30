@@ -1,9 +1,9 @@
 import TabItem from './TabItem'
-import { Planet, PLANETS } from '@/lib/planets'
+import { PLANET, PLANETS } from '@/lib/planets'
 
 type TabMenuProps = {
-  selectedTab: Planet
-  handleSelectTab: (tabName: Planet) => void
+  selectedTab: PLANET
+  handleSelectTab: (tabName: PLANET) => void
 }
 
 const TabMenu = ({ selectedTab, handleSelectTab }: TabMenuProps) => {
