@@ -3,17 +3,17 @@
 import Image from 'next/image'
 import TabMenu from '@/components/TabMenu'
 import { useState } from 'react'
-import { Planet, PLANET_ASSETS } from '@/lib/planets'
+import { PLANET, PLANET_ASSETS } from '@/lib/planets'
 
 const Destination = () => {
-  const [selectedTab, setSelectedTab] = useState<Planet>('MOON')
+  const [selectedTab, setSelectedTab] = useState<PLANET>('MOON')
 
-  const handleSelectTab = (tab: Planet) => setSelectedTab(tab)
+  const handleSelectTab = (tab: PLANET) => setSelectedTab(tab)
 
   return (
     <div
       className={[
-        'preserve-navbar-space h-dvh',
+        'preserve-navbar-space min-h-dvh',
         "bg-cover bg-[url('/assets/destination/background-destination-mobile.jpg')]",
       ].join(' ')}
     >
@@ -47,7 +47,7 @@ const Destination = () => {
               src={`/assets/destination/image-${selectedTab.toLowerCase()}.png`}
               width={150}
               height={150}
-              alt="moon"
+              alt={selectedTab}
             />
           </picture>
         </div>

@@ -6,7 +6,7 @@ const Crew = () => {
   return (
     <main
       className={[
-        "h-dvh bg-cover bg-no-repeat bg-[url('/assets/crew/background-crew-mobile.jpg')]",
+        "min-h-dvh bg-cover bg-no-repeat bg-[url('/assets/crew/background-crew-mobile.jpg')]",
         'preserve-navbar-space',
       ].join(' ')}
     >

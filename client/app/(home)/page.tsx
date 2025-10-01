@@ -1,16 +1,27 @@
 'use client'
 
+import Image from 'next/image'
 import ExploreButton from '@/components/ExploreButton'
 
 export default function Home() {
   return (
     <main
       className={[
-        "relative bg-cover bg-no-repeat bg-[url('/assets/home/background-home-mobile.jpg')] ",
-        'preserve-navbar-space h-dvh overflow-hidden',
+        'relative z-0',
+        'preserve-navbar-space min-h-dvh',
+        'flex',
       ].join(' ')}
     >
-      <div className="flex flex-col p-300 h-full">
+      <div className="fixed inset-0">
+        <Image
+          src="/assets/home/background-home-mobile.jpg"
+          alt="bg-space"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      <div className="flex flex-col p-300 min-h-full z-10">
         <div className="flex flex-col items-center justify-center gap-300">
           <p className="text-5 text-[16px] h-[19px] leading-relaxed text-secondary-blue tracking-[2px]">
             SO, YOU WANT TO TRAVEL TO

@@ -53,7 +53,7 @@ const CrewSlide = () => {
                 .split(' ')
                 .join('-')}.png`}
               fill
-              className="object-contain [mask-image:linear-gradient(to_bottom,black_80%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent)]"
+              className="object-contain relative [mask-image:linear-gradient(to_bottom,black_80%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent)]"
               alt={crewData.name}
             />
           </picture>
