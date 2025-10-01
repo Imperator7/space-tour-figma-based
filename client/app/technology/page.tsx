@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div
       className={[
-        "h-dvh bg-cover bg-no-repeat bg-[url('/assets/technology/background-technology-mobile.jpg')]",
+        "min-h-dvh bg-cover bg-no-repeat bg-[url('/assets/technology/background-technology-mobile.jpg')]",
         'preserve-navbar-space',
       ].join(' ')}
     >

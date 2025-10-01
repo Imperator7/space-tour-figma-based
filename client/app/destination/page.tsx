@@ -13,7 +13,7 @@ const Destination = () => {
   return (
     <div
       className={[
-        'preserve-navbar-space h-dvh',
+        'preserve-navbar-space min-h-dvh',
         "bg-cover bg-[url('/assets/destination/background-destination-mobile.jpg')]",
       ].join(' ')}
     >
