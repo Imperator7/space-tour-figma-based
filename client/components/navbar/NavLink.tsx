@@ -8,6 +8,25 @@ type NavLinkProps = {
   className?: string
 }
 
+const Indicator = ({
+  selected,
+  position,
+}: {
+  selected: boolean
+  position: 'bottom' | 'right'
+}) => {
+  return (
+    <div
+      className={[
+        'bg-white opacity-0 transition-opacity duration-300 delay-50 ease-in',
+        'md:absolute md:bottom-0 md:left-0 md:right-0',
+        position === 'bottom' ? 'h-[3px] w-full' : 'h-full w-[3px]',
+        selected ? 'opacity-100' : 'group-hover:opacity-50',
+      ].join(' ')}
+    />
+  )
+}
+
 const MobileLayout = ({
   selected,
   linkData,
@@ -26,12 +45,7 @@ const MobileLayout = ({
       </p>
       <p className="text-8 leading-none">{linkData.name.toUpperCase()}</p>
     </div>
-    <div
-      className={[
-        'w-[3px]  bg-white opacity-0 transition-opacity duration-300 delay-50 ease-in',
-        selected ? 'opacity-100' : 'group-hover:opacity-50',
-      ].join(' ')}
-    />
+    <Indicator selected={selected} position="right" />
   </div>
 )
 
@@ -55,14 +69,7 @@ const TabletLayout = ({
         </p>
         <p className="text-8 leading-none">{linkData.name.toUpperCase()}</p>
       </div>
-      <div className={['flex h-full w-full absolute items-end'].join(' ')}>
-        <div
-          className={[
-            'bg-white w-full h-[3px] opacity-0 transition-opacity duration-300 delay-50 ease-in',
-            selected ? 'opacity-100' : 'group-hover:opacity-50 ',
-          ].join(' ')}
-        ></div>
-      </div>
+      <Indicator selected={selected} position="bottom" />
     </div>
   )
 }
