@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const HomeButton = () => {
   return (
-    <div className="flex md:min-w-[128px] justify-center">
+    <div className="flex md:min-w-[128px] lg:min-w-[180px] justify-center">
       <Link href={'/'}>
         <Image
           src="assets/shared/logo.svg"
