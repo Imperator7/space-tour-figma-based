@@ -1,7 +1,7 @@
 'use client'
 
 import { links } from '@/lib/constants/links'
-import NavItem from '@/components/navbar/NavLink'
+import NavLink from '@/components/navbar/NavLink'
 import CloseButton from '@/components/navbar/CloseButton'
 import { usePathname } from 'next/navigation'
 
@@ -36,7 +36,7 @@ const MobileNavbar = ({
         <CloseButton handleClose={handleCloseNavbar} />
         <div className="flex flex-col gap-400">
           {links.map((link, i) => (
-            <NavItem
+            <NavLink
               key={link.name}
               selected={pathname === link.href}
               linkData={link}
