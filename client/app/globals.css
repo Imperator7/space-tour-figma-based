@@ -102,6 +102,6 @@ body {
 
 @layer utilities {
   .preserve-navbar-space {
-    @apply pt-[88px];
+    @apply pt-[88px] md:pt-[96px];
   }
 }
