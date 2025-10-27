@@ -1,20 +1,18 @@
 'use client'
 
+import { links } from '@/lib/constants/links'
 import NavItem from '@/components/navbar/NavLink'
 import CloseButton from '@/components/navbar/CloseButton'
 import { usePathname } from 'next/navigation'
-import { LinkObject } from '../MainLayout'
 
 type NavbarProps = {
   toggleNavbar: boolean
   handleCloseNavbar: () => void
-  links: LinkObject[]
 }
 
 const MobileNavbar = ({
   toggleNavbar = false,
   handleCloseNavbar,
-  links,
 }: NavbarProps) => {
   const pathname = usePathname()
 
