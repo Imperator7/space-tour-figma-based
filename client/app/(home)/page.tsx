@@ -21,7 +21,7 @@ export default function Home() {
           priority
         />
       </div>
-      <div className="flex flex-col p-300 min-h-full z-10">
+      <div className="flex flex-col p-300 md:px-500 md:py-1600 min-h-full z-10">
         <div className="flex flex-col items-center justify-center gap-300">
           <p className="text-5 text-[16px] h-[19px] leading-relaxed text-secondary-blue tracking-[2px]">
             SO, YOU WANT TO TRAVEL TO
