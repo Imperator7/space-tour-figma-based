@@ -6,7 +6,10 @@ type NavToggleProps = {
 
 const NavToggle = ({ handleClick }: NavToggleProps) => {
   return (
-    <div className="flex items-center cursor-pointer" onClick={handleClick}>
+    <div
+      className="flex items-center cursor-pointer md:hidden"
+      onClick={handleClick}
+    >
       <Image
         src="/assets/shared/icon-hamburger.svg"
         width={24}

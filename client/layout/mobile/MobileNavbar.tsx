@@ -1,49 +1,28 @@
 'use client'
 
-import NavItem from '@/components/NavItem'
-import CloseButton from '@/components/CloseButton'
+import NavItem from '@/components/navbar/NavLink'
+import CloseButton from '@/components/navbar/CloseButton'
 import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
+import { LinkObject } from '../MainLayout'
 
 type NavbarProps = {
   toggleNavbar: boolean
   handleCloseNavbar: () => void
+  links: LinkObject[]
 }
 
 const MobileNavbar = ({
   toggleNavbar = false,
   handleCloseNavbar,
+  links,
 }: NavbarProps) => {
-  const links = [
-    {
-      name: 'home',
-      href: '/',
-    },
-    {
-      name: 'destination',
-      href: '/destination',
-    },
-    {
-      name: 'crew',
-      href: '/crew',
-    },
-    {
-      name: 'technology',
-      href: '/technology',
-    },
-  ]
-
   const pathname = usePathname()
-
-  useEffect(() => {
-    console.log(pathname)
-  }, [pathname])
 
   return (
     <div
       className={[
         'flex h-dvh inset-0',
-        'z-50 right-0',
+        'z-50 right-0 md:hidden',
         'fixed transition-all duration-500',
         toggleNavbar ? '' : 'translate-x-full',
       ].join(' ')}
