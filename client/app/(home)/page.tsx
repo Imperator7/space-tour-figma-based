@@ -20,16 +20,16 @@ export default function Home() {
           "lg:bg-[url('/assets/home/background-home-desktop.jpg')]",
         ].join(' ')}
       ></div>
-      <div className="flex flex-col p-300 md:px-500 md:py-1600 min-h-full w-full items-center z-10">
-        <div className="flex flex-col items-center md:gap-600 h-full md: max-w-[540px]">
-          <div className="flex flex-col items-center justify-center gap-300 md:max-w-[512px]">
-            <p className="text-5 text-[16px] md:text-[28px] h-[19px] md:h-[34px] leading-relaxed text-secondary-blue tracking-[2px]">
+      <div className="flex flex-col p-300 md:px-500 md:py-1600 lg:px-1600 min-h-full w-full items-center z-10">
+        <div className="flex flex-col lg:flex-row  items-center md:gap-600 h-full lg:items-end lg:justify-between lg:w-full lg:max-w-[1280px]">
+          <div className="flex flex-col items-center justify-center gap-300 md:max-w-[512px] lg:max-w-[540px] ">
+            <p className="text-5 text-[16px] md:text-[28px] h-[19px] md:h-[34px] leading-relaxed text-secondary-blue tracking-[2px] lg:w-full lg:text-left">
               SO, YOU WANT TO TRAVEL TO
             </p>
-            <p className="text-1 text-[80px] md:text-[144px] h-[92px] md:h-[165px] flex items-center leading-none">
+            <p className="text-1 text-[80px] md:text-[144px] h-[92px] md:h-[165px] flex items-center leading-none lg:w-full lg:text-left">
               SPACE
             </p>
-            <p className="text-9 text-[15px] text-center text-secondary-blue">
+            <p className="text-9 text-[15px] lg:text-[18px] text-center text-secondary-blue lg:text-left">
               Let’s face it; if you want to go to space, you might as well
               genuinely go to outer space and not hover kind of on the edge of
               it. Well sit back, and relax because we’ll give you a truly out of

@@ -10,7 +10,7 @@ const NavLinks = () => {
       className={[
         'flex bg-white/5 h-[96px] backdrop-blur-[40px] w-full',
         'min-w-[488px] items-center justify-end gap-600 px-500',
-        'hidden md:flex',
+        'hidden md:flex max-w-[736px]',
       ].join(' ')}
     >
       {links.map((link, i) => (

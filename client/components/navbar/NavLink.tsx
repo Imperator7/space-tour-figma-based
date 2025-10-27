@@ -49,7 +49,7 @@ const MobileLayout = ({
   </div>
 )
 
-const TabletLayout = ({
+const TabletDesktopLayout = ({
   selected,
   linkData,
   index,
@@ -74,8 +74,6 @@ const TabletLayout = ({
   )
 }
 
-const DesktopNavbar = () => {}
-
 const NavLink = ({ selected, linkData, index }: NavLinkProps) => {
   return (
     <Link href={linkData.href} className="h-full">
@@ -85,7 +83,7 @@ const NavLink = ({ selected, linkData, index }: NavLinkProps) => {
         index={index}
         className="md:hidden"
       />
-      <TabletLayout
+      <TabletDesktopLayout
         selected={selected}
         linkData={linkData}
         index={index}
