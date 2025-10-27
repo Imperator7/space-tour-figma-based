@@ -27,11 +27,12 @@ const MobileNavbar = ({
         toggleNavbar ? '' : 'translate-x-full',
       ].join(' ')}
     >
-      <div className="w-full" onClick={handleCloseNavbar}></div>
+      <div className="flex-1" onClick={handleCloseNavbar}></div>
       <div
         className={[
           'bg-[#0B0D17]/15 backdrop-blur-[40px]',
           'pl-400 flex flex-col gap-600',
+          'w-[254px]',
         ].join(' ')}
       >
         <CloseButton handleClose={handleCloseNavbar} />
