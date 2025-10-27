@@ -8,32 +8,8 @@ type RootProps = {
   children: React.ReactNode
 }
 
-export type LinkObject = {
-  name: string
-  href: string
-}
-
 const MainLayout = ({ children }: RootProps) => {
   const [toggleNavbar, setToggleNavbar] = useState(false)
-
-  const links: LinkObject[] = [
-    {
-      name: 'home',
-      href: '/',
-    },
-    {
-      name: 'destination',
-      href: '/destination',
-    },
-    {
-      name: 'crew',
-      href: '/crew',
-    },
-    {
-      name: 'technology',
-      href: '/technology',
-    },
-  ] as const
 
   const handleCloseNavbar = () => {
     setToggleNavbar(false)
@@ -45,11 +21,10 @@ const MainLayout = ({ children }: RootProps) => {
 
   return (
     <div className="h-dvh">
-      <Navbar handleOpenNavbar={handleOpenNavbar} links={links} />
+      <Navbar handleOpenNavbar={handleOpenNavbar} />
       <MobileNavbar
         toggleNavbar={toggleNavbar}
         handleCloseNavbar={handleCloseNavbar}
-        links={links}
       />
       {children}
     </div>

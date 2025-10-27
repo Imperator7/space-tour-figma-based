@@ -1,12 +1,8 @@
-import { LinkObject } from '@/layout/MainLayout'
+import { links } from '@/lib/constants/links'
 import NavLink from './NavLink'
 import { usePathname } from 'next/navigation'
 
-type NavLinksProps = {
-  links: LinkObject[]
-}
-
-const NavLinks = ({ links }: NavLinksProps) => {
+const NavLinks = () => {
   const pathname = usePathname()
 
   return (

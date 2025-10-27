@@ -1,14 +1,12 @@
 import HomeButton from '@/components/navbar/HomeButton'
 import NavToggle from '@/components/navbar/NavToggle'
 import NavLinks from '@/components/navbar/NavLinks'
-import { LinkObject } from './MainLayout'
 
 type NavbarProps = {
   handleOpenNavbar: () => void
-  links: LinkObject[]
 }
 
-const Navbar = ({ handleOpenNavbar, links }: NavbarProps) => {
+const Navbar = ({ handleOpenNavbar }: NavbarProps) => {
   return (
     <nav
       className={[
@@ -18,7 +16,7 @@ const Navbar = ({ handleOpenNavbar, links }: NavbarProps) => {
     >
       <div className="flex justify-between w-full items-center">
         <HomeButton />
-        <NavLinks links={links} />
+        <NavLinks />
         <NavToggle handleClick={handleOpenNavbar} />
       </div>
     </nav>
