@@ -21,7 +21,7 @@ export default function Home() {
         ].join(' ')}
       ></div>
       <div className="flex flex-col p-300 md:px-500 md:py-1600 lg:px-1600 min-h-full w-full items-center z-10">
-        <div className="flex flex-col lg:flex-row  items-center md:gap-600 h-full lg:items-end lg:justify-between lg:w-full lg:max-w-[1280px]">
+        <div className="flex flex-col lg:flex-row  items-center md:gap-600 h-full lg:items-end md:justify-between lg:w-full lg:max-w-[1280px]">
           <div className="flex flex-col items-center justify-center gap-300 md:max-w-[512px] lg:max-w-[540px] ">
             <p className="text-5 text-[16px] md:text-[28px] h-[19px] md:h-[34px] leading-relaxed text-secondary-blue tracking-[2px] lg:w-full lg:text-left">
               SO, YOU WANT TO TRAVEL TO
