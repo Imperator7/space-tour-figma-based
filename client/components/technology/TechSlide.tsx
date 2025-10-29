@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { TECH, TECH_ASSETS } from '@/lib/techs'
 import PaginationBigDots from '../PaginationBigDots'
-import Image from 'next/image'
 
 const TechSlide = (/*{ selectedTab = 'spaceport' }: TechSlideProps*/) => {
   const [selectedTab, setSelectedTab] = useState<TECH>('Launch_vehicle')
