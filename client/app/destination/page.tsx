@@ -27,12 +27,12 @@ const Destination = () => {
           'h-full p-300 md:p-500 lg:p-600 ',
         ].join(' ')}
       >
-        <div className="h-full gap-300 flex flex-col items-center w-full max-w-[1110px]">
+        <div className="h-full min-h-fit gap-300 flex flex-col items-center w-full max-w-[1110px]">
           <h3 className="flex h-[19px] md:h-[24px] gap-300 items-center justify-center md:justify-start w-full">
-            <span className="text-8 font-bold tabular-nums leading-none opacity-25">
+            <span className="text-8 text-[16px] md:text-[20px] lg:text-[28px] font-bold tabular-nums leading-none opacity-25">
               01
             </span>
-            <span className="text-5 text-[16px] leading-none">
+            <span className="text-5 text-[16px] md:text-[20px] lg:text-[28px] leading-none">
               PICK YOUR DESTINATION
             </span>
           </h3>
@@ -59,7 +59,7 @@ const Destination = () => {
               </picture>
             </div>
             <div className="flex flex-col gap-300 w-full items-center lg:items-center">
-              <div className="flex flex-col gap-300 max-w-[445px]">
+              <div className="flex flex-col gap-300 lg:max-w-[445px]">
                 <div className="flex flex-col gap-300 items-center lg:items-start h-full md:max-w-[514px] lg:max-w-[445px]  lg:justify-center">
                   <TabMenu
                     selectedTab={selectedTab}

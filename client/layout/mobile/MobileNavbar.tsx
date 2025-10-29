@@ -19,7 +19,7 @@ const MobileNavbar = ({
   return (
     <div
       className={[
-        'flex h-dvh inset-0',
+        'flex h-dvh min-h-fit inset-0',
         'z-50 right-0 md:hidden',
         'fixed transition-all duration-500',
         toggleNavbar ? '' : 'translate-x-full',
