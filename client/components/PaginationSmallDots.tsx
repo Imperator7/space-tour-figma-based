@@ -15,7 +15,7 @@ const PaginationSmallDots = ({
         <div
           key={index}
           className={[
-            'w-[10px] lg:w-[15px] h-[10px] lg:h-[15px] rounded-full',
+            'w-[10px] lg:w-[15px] h-[10px] lg:h-[15px] rounded-full cursor-pointer',
             pageSelected === index
               ? 'bg-white'
               : 'bg-[#979797] opacity-[17.44%] ',

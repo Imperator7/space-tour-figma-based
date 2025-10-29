@@ -10,13 +10,14 @@ const PaginationBigDots = ({
   handleSelect,
 }: PaginationBigDotsProps) => {
   return (
-    <div className="flex gap-200">
+    <div className="flex lg:flex-col gap-200 lg:gap-400">
       {TECHS.map((tech, index) => (
         <div
           key={index}
           className={[
-            'h-[40px] w-[40px] rounded-full cursor-pointer',
+            'h-[40px] w-[40px] md:h-[56px] md:w-[56px] lg:h-[80px] lg:w-[80px] rounded-full cursor-pointer',
             'flex items-center justify-center',
+            'text-4 text-[18px] md:text-[24px] lg:text-[32px]',
             selectedTab === tech
               ? 'bg-white text-black'
               : 'border border-white/15',
