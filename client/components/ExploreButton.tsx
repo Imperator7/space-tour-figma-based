@@ -10,7 +10,7 @@ const ExploreButton = () => {
       >
         <div
           className={[
-            'absolute bg-white/10 rounded-full',
+            'absolute bg-white/10 rounded-full w-[144px] h-[144px]  md:w-[272px] md:h-[272px]',
             'group-hover:h-[320px] group-hover:w-[320px] md:group-hover:h-[448px] md:group-hover:w-[448px] transition-all duration-500 ease',
           ].join(' ')}
         ></div>
